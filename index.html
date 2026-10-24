@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator By Esrom Tesfaye</title>
+    <title>Ultra-3D Quantum Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div id="calculator">
-        <input id="display" readonly>
-        <div id="keys">
-            <button class="btn"onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button class="btn"onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button class="btn"onclick="appendToDisplay('*')">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>   
-            <button class="btn"onclick="appendToDisplay('/')">/</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button class="btn"onclick="clearDisplay()">C</button>
+    <div class="scene">
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div id="calculator-container">
+            <div id="calculator">
+                <div class="calculator-glow"></div>
+                <input id="display" readonly placeholder="0">
+                <div id="keys">
+                    <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+                    <button class="num" onclick="appendToDisplay('7')">7</button>
+                    <button class="num" onclick="appendToDisplay('8')">8</button>
+                    <button class="num" onclick="appendToDisplay('9')">9</button>
+
+                    <button class="btn operator" onclick="appendToDisplay('-')">−</button>
+                    <button class="num" onclick="appendToDisplay('4')">4</button>
+                    <button class="num" onclick="appendToDisplay('5')">5</button>
+                    <button class="num" onclick="appendToDisplay('6')">6</button>
+
+                    <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+                    <button class="num" onclick="appendToDisplay('1')">1</button>
+                    <button class="num" onclick="appendToDisplay('2')">2</button>
+                    <button class="num" onclick="appendToDisplay('3')">3</button>
+
+                    <button class="btn operator" onclick="appendToDisplay('/')">÷</button>
+                    <button class="num" onclick="appendToDisplay('0')">0</button>
+                    <button class="num" onclick="appendToDisplay('.')">.</button>
+                    <button class="btn equal" onclick="calculate()">=</button>
+
+                    <button class="btn clear" onclick="clearDisplay()" style="grid-column: span 4;">CLEAR</button>
+                </div>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
